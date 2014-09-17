@@ -1,0 +1,4 @@
+# Netbeans Ignore
+build
+dist
+private

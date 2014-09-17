@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="phonecatApp">
+    <head>
+        <title>Belajar Java-Web</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/bootstrap.css"> 
+    </head>
+    <body ng-controller="ProdukCtrl">
+        <h1>Daftar Produk</h1>
+        <table class="table table-bordered table-responsive table-hover table-striped">
+            <thead>
+                <th>Kode</th>
+                <th>Nama</th>
+                <th>Harga</th>
+            </thead>
+            <tbody>
+                <tr ng-repeat="p in produk">
+                    <td>{{p.kode}}</td>
+                    <td>{{p.nama}}</td>
+                    <td>{{p.harga}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Total number of product(s): {{produk.length}}</p>
+        <button class="btn btn-primary" ng-click="simpan()">Ok</button>
+        <button class="btn btn-danger">Cancel</button>
+        <script src="js/angular.min.js"></script>
+        <script src="js/controller.js"></script>
+    </body>
+</html>
